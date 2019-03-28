@@ -1,0 +1,159 @@
+/*TODO:写真をクリックで拡大…あれ、やること多すぎない！？（*/
+
+
+.top {
+    display: block;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 1) 100%);
+/*    background: linear-gradient(to bottom, rgba(240, 128, 128, 1) 0, rgba(240, 128, 128, 0.5) 80%, rgba(255, 255, 255, 1) 100%);*/
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.top h1 {
+    text-align: left;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    font-size: 6em;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    color: black;
+}
+
+.top::after {
+    content: "";
+    background-image: url("../img/jsa\ running.JPG");
+    width: 100%;
+    height: 99%;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+@media (max-width: 800px) {
+    .top h1 {
+        font-size: 6em;
+    }
+}
+
+.content{
+    width: 80%;
+    max-width: 1200px;
+    font-size: 2.2em;
+    margin: auto;
+    padding: 0px 30px;
+}
+
+.content p{
+    background: rgb(242, 242, 242);
+    border-radius: 25px;
+    padding: 1em 1.5em;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+    transition: 150ms;
+}
+
+
+a:hover {
+    color: white;
+    background-color: lightcoral;
+}
+.Facebook:hover {
+    color: white;
+    background-color: darkblue;
+}
+
+/*
+@media(max-width: 1000px){
+    .content{
+        font-size: 3em;
+    }
+}
+*/
+.timeline{
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.timeline .event{
+    padding: 30px 0px;
+}
+
+.timeline .event h1{
+    width: 90%;
+    font-size: 3em;
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+
+.timeline .event p{
+    width: 90%;
+    font-size: 2em;
+    margin: 30px auto;
+}
+
+.timeline .event .image-grid{
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timeline .event .image-grid .image-container{
+    flex: 25%;
+    max-width: 25%;
+}
+
+.timeline .event .image-grid .slideButton{
+    display: none;
+}
+
+@media(max-width: 1000px){
+    .timeline .event .image-grid .image-container{
+        flex: 50%;
+        max-width: 50%;
+    }
+    .timeline .event p{
+        font-size: 2em;
+    }
+}
+
+@media(max-width: 600px){
+    /*本当はこれスライドショーにしたいんだけどね…
+    　面倒だからいっか（）*/
+    .timeline .event .image-grid .image-container{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.timeline .event .image-grid .image-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.6;
+}
+
+
+.timeline .event .image-grid .image-container img:hover{
+    opacity: 1;
+}
+
+.line {
+    border-bottom: 1px solid rgba(190, 190, 190);
+    width: 100%;
+    margin: 0 auto;
+}
+

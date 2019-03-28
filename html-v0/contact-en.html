@@ -1,0 +1,414 @@
+<!DOCTYPE >
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact — UCLA Japanese Student Association</title>
+    <link rel="icon" href="../img/jsa icon.png">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/contact.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans:300,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation-bar">
+            <div id="navigation-container">
+                <a href="../">
+                    <img class="logo" src="../img/UCLA JSA logo.png" ; alt="JSAロゴ">
+                </a>
+                <!-- hamburger icon -->
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn">
+                    <span class="navicon"></span>
+                </label>
+                <ul class="menu">
+                    <li>
+                        <a href="../home-en/">
+                            HOME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../about-en/">
+                            ABOUT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../events-en/">
+                            EVENTS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../career-en/">
+                            CAREER
+                        </a>
+                    </li>
+                    <!--
+                            <li>
+                                <a href="tours-en">
+                                    TOURS
+                                </a>
+                            </li>
+                            -->
+                    <li>
+                        <a href="../join-en/">
+                            JOIN JSA
+                        </a>
+                    </li>
+                    <li class="current">
+                        <a href="../contact-en/">
+                            CONTACT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../home-jp/">
+                            日本語
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="top">
+        <h1>
+            Contact
+        </h1>
+    </div>
+    <div class="content">
+        <p>
+            <b>Questions?</b> Contact us through our submission form. Find us on social media. Look through our FAQ. We're more
+            than happy to help you.
+        </p>
+    </div>
+
+
+    <div class="steps">
+
+
+        <div class="step" id="form">
+            <h1>Submit form</h1>
+            <div class="line"></div>
+            <p class="notsubmitted">Please expect us to reply within 3-5 business days. You may also directly contact us at
+                <a href="mailto:jsa.ucla@gmail.com" target="_blank">jsa.ucla@gmail.com</a>. Please look through our
+                <a href="#faq">FAQ</a> first before submitting the form.</p>
+
+            <!--
+                ちなみにゴミみたいなコードなのでセキュリティ対策はしてません。
+                後々対策してみます。すみません。
+            -->
+            <div class="form-container">
+                <form method="post" class="notsubmitted" id="mailform" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    Subject
+                    <br />
+                    <select id="dropdown" name="content">
+                        <option value="general">General inquiries</option>
+                        <option value="event">Social events</option>
+                        <option value="career">Career events</option>
+                        <option value="join jsa">Joining JSA</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br /> First Name
+                    <br />
+                    <input type="text" name="firstname" value="" required/>
+                    <br /> Last Name
+                    <br />
+                    <input type="text" name="lastname" value="" required/>
+                    <br /> Email Address
+                    <br />
+                    <input type="email" name="emailaddress" value="" required/>
+                    <br /> Message
+                    <br />
+                    <textarea name="message" cols="30" rows="5" required></textarea>
+                    <br />
+                    <br />
+                    <input type="hidden" name="language" value="English">
+                    <input type="submit" value="Send" class="button" />
+                </form>
+            </div>
+            <p class="submitted hidden">
+                <b>Your form has been submitted successfully!</b> You can expect us to reply your inquiry within 3-5 business
+                days. If you do not receive a reply after this period, please send us an email at
+                <a href="mailto:jsa.ucla@gmail.com" target="_blank">jsa.ucla@gmail.com</a>.
+            </p>
+        </div>
+        <div class="step" id="faq">
+            <h1>FAQ</h1>
+            <div class="line"></div>
+            <div class="accordion-container">
+                <h2>Joining JSA</h2>
+                <div class="cp_actab">
+                    <input id="tab-one" type="checkbox" name="tabs">
+                    <label for="tab-one">
+                        How can I become a JSA member?
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Find us on our first General Meeting or any of our social events!</b> If you cannot contact us
+                            a directly, send us a message
+                            <a href="#form">here</a> and we'll send you all the details!</p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-three" type="checkbox" name="tabs">
+                    <label for="tab-three">When can I become a JSA member?</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b> You can become a member at any time!
+                            </b> We welcome new members all year long. You may apply for membership by sending us a message
+                            <a href="#form">here</a> and we'll send you all the details!
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-two" type="checkbox" name="tabs">
+                    <label for="tab-two">How long does membership last for?</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Membership is good for an entire academic year </b> (from the beginning of fall quarter to the
+                            end of summer quarter, regardless of when you became a member. Please check the
+                            <a href="https://www.registrar.ucla.edu/Calendars/Annual-Academic-Calendar"
+                                target="_blank">UCLA academic calendar</a>for details.
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-eight" type="checkbox" name="tabs">
+                    <label for="tab-eight"> Is there a membership fee to join JSA?</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Yes; to allow funds for future events, we ask for a donation fee of $20 per year for membership.</b>
+                            We accept cash, credit/debit cards, and Venmo. Ask us
+                            <a href="#form">here</a> if you require more information regarding membership fees.
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-four" type="checkbox" name="tabs">
+                    <label for="tab-four">What are the benefits of becoming a JSA member?</label>
+                    <div class="cp_actab-content">
+                        <p> You will receive
+                            <b>free access</b> to most of our social/career events, and
+                            <b>discounts</b> and/or
+                            <b>priority access</b> to our more popular events for the entire academic year!
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-five" type="checkbox" name="tabs">
+                    <label for="tab-five">I'm not a UCLA student. Can I still join?
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Yes!</b> We are open to anyone and everyone. Some of our members choose to join JSA so that they
+                            can attend our events. However, please note that most of our events are located near UCLA, and
+                            may be difficult to participate if you are out of the Los Angeles region. </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-six" type="checkbox" name="tabs">
+                    <label for="tab-six">I'm not Japanese/I don't speak Japanese. Can I still join?</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Yes!</b> We are open to anyone and everyone. We structure our social events so that everyone
+                            can actively participate, regardless of your race/ethnicity/fluency. Keep in mind, however, that
+                            some of our career events may require Japanese fluency.
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-seven" type="checkbox" name="tabs">
+                    <label for="tab-seven">I'm not a JSA member, but I'm interested in going to a JSA event. Is that possible?</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Yes!</b> JSA events are open to the general public. However, JSA members may receive discounts/priority
+                            for some of our more popular events, due to the limited number of spots available.
+                            <a href="#form">Ask us</a> if you are looking to participate in a particular event!
+                        </p>
+                    </div>
+                </div>
+                <!--we're at tab-eight-->
+
+                <h2>About Us</h2>
+                <div class="cp_actab">
+                    <input id="tab-one-about" type="checkbox" name="tabs">
+                    <label for="tab-one-about"> How is JSA different from NSU (Nikkei Student Union) or JPAM (JaPan-AMerica Language & Culture Club)?
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            JSA, NSU, and JPAM are student organizations that collective represent Japanese culture and identity at UCLA. Our mission
+                            statements vary slightly to cater to different aspects of our complex community. Our mission
+                            is to provide a social/professional community for
+                            all students who are interested in Japanese culture and identity.
+                        </p>
+<!--
+                        <ul>
+                            <li>
+                                JSA's mission is to provide a social/professional community for
+                                <b>all students who are interested in Japanese culture and identity</b>.
+                            </li>
+                            <li>
+                                NSU's mission is to promote
+                                <b>Japanese-American cultural and political awareness</b> among the student body.
+                            </li>
+                            <li>
+                                JPAM's mission is to promote language and culture exchange between the
+                                <b>Japanese exchange students</b> residing in America as well as
+                                <b>UCLA-affiliated students studying Japanese.</b>
+                            </li>
+                        </ul>
+-->
+                        <p>
+                            Visit
+                            <a href="https://www.facebook.com/uclanikkei/" target="_blank">NSU</a> and
+                            <a href="https://www.facebook.com/groups/JPAMUCLA/" target="_blank">JPAM</a> for more information!
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-two-about" type="checkbox" name="tabs">
+                    <label for="tab-two-about">Can I join JSA and NSU/JPAM at the same time?</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Yes!</b> We've also done joint events with NSU/JPAM in the past, so you can experience the best
+                            of both worlds.
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-three-about" type="checkbox" name="tabs">
+                    <label for="tab-three-about"> How do I join the JSA officer team?
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Our officer application opens at the beginning of winter quarter.</b> The information will be
+                            announced on our
+                            <a href="https://www.facebook.com/groups/218855944944721/" class="Facebook" target="_blank">Facebook group</a> and on our
+                            <a href="join#newsletter">newsletter</a>. Applicants will be given a 10-week intern period before they officially become
+                            officers. Feel free to
+                            <a href="#form">send us a message</a> if you're interested in what we do!
+                        </p>
+                    </div>
+                </div>
+                <h2 id="career-faq">Career</h2>
+                <div class="cp_actab">
+                    <input id="tab-one-career" type="checkbox" name="tabs">
+                    <label for="tab-one-career"> How do I organize a career event with UCLA JSA?
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>Please contact our career team with our
+                                <a href="#form">form</a>, or email us at
+                                <a href="mailto:uclajsa-career@hotmail.com" target="_blank">uclajsa-career@hotmail.com</a>.</b> Please include the following information:
+                        </p>
+                        <ul>
+                            <li>Name of company
+                            </li>
+                            <li>Name of representative(s)
+                            </li>
+                            <li>Contact information
+                            </li>
+                            <li>Projected date(s)
+                            </li>
+                            <li>Type of event (company infosession, on-campus interview, etc.)
+                            </li>
+                            <li>Projected number of participants (students)
+                            </li>
+                        </ul>
+                        <p> We will return your inquiry within 3-5 business days.
+                        </p>
+                    </div>
+                </div>
+                <!--Joining:
+                    How do I apply for membership?
+                    I'm not a UCLA student. Can I still join UCLA JSA?
+                    I'm not Japanese/I don't speak Japanese. Can I still join UCLA JSA?
+                    I'm not a JSA member, but I'm still interested in going to JSA events. Is that possible?
+                    How is UCLA JSA different from UCLA Nikkei Student Union/UCLA Japan-America Language & Culture Club?
+                    How can our company organize a career event with UCLA JSA?
+                    How can our company become a sponsor for UCLA JSA?
+                    How do I join the JSA officer team?
+                -->
+            </div>
+        </div>
+        <div class="step" id="social">
+            <h1>Get social.</h1>
+            <div class="line"></div>
+            <div class="links">
+                <div class="link">
+                    <a href="https://www.instagram.com/ucla.jsa/" target="_blank">
+                        <img src="../img/instagram icon.png" alt="インスタグラム">
+                    </a>
+                    <p>
+                        <b>Instagram</b>
+                        <br>@ucla.jsa
+                    </p>
+                </div>
+                <div class="link">
+                    <a href="https://www.facebook.com/groups/218855944944721/" target="_blank">
+                        <img src="../img/facebook icon 2.jpg" alt="フェイスブック">
+                    </a>
+                    <p>
+                        <b>Facebook</b>
+                    </p>
+                </div>
+                <!--ブログ・ツイッター設置検討中-->
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-text">
+            <h3> © UCLA JSA. All Rights Reserved.</h3>
+        </nav>
+        <nav class="footer-bar">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/ucla.jsa/" target="_blank">
+                        <img src="../img/instagram icon.png" width="20" height="20" alt="インスタグラム">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/groups/218855944944721/" target="_blank">
+                        <img src="../img/facebook icon.png" width="20" height="20" alt="フェイスブック">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:jsa.ucla@gmail.com" target="_blank">
+                        <img src="../img/mail icon.png" width="20" height="20" alt="メール">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        $('#mailform').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '../send.php',
+                type: 'post',
+                data: $('#mailform').serialize(),
+                success: function () {
+                    //alert('OK');
+                    var notsubmittedItems = document.querySelectorAll(".notsubmitted");
+                    [].forEach.call(notsubmittedItems, function (el) {
+                        el.classList.add("hidden");
+                    });
+                    document.querySelector('.submitted').classList.remove('hidden');
+                    location.href = "#form";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

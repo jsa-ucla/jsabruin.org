@@ -1,0 +1,343 @@
+.top {
+    display: block;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 1) 100%);
+    /*    background: linear-gradient(to bottom, rgba(240, 128, 128, 1) 0, rgba(240, 128, 128, 0.5) 80%, rgba(255, 255, 255, 1) 100%);*/
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.top h1 {
+    text-align: left;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    font-size: 6em;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    color: black;
+}
+
+.top::after {
+    content: "";
+    background-image: url("../img/jsa\ graduation\ 2.jpg");
+    /*2018-2019が過ぎたら写真を変えるんだ！いいな！（）...*/
+    background-image: url("../img/jsa\ 2018.JPG");
+    width: 100%;
+    height: 99%;
+    background-size: cover;
+    background-position: 0px 20%;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width: 800px) {
+    .top h1 {
+        font-size: 6em;
+    }
+}
+
+.content {
+    width: 80%;
+    max-width: 1200px;
+    font-size: 2.2em;
+    margin: auto;
+    padding: 0px 30px;
+}
+
+.content p {
+    background: rgb(242, 242, 242);
+    border-radius: 25px;
+    padding: 1em 1.5em;
+    margin-top: 2em;
+}
+
+.content a {
+    text-decoration: underline;
+    color: black;
+    transition: 150ms;
+}
+
+.content a:hover {
+    color: white;
+    background-color: lightcoral;
+}
+
+.steps {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.steps h1 {
+    font-size: 3em;
+    margin: 5%;
+    margin-top: 10%;
+    font-weight: normal;
+}
+/*
+.steps .step {
+   padding: 30px 0px;
+}
+*/
+
+.steps .step h1 {
+    width: 90%;
+    font-size: 3em;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+
+.steps .step img {
+    margin: 0px auto;
+    width: 75%;
+    display: block;
+    margin-top: 5%;
+    opacity: 1;
+    transition: 300ms
+}
+
+.steps .step img:hover {
+    opacity: 0.7;
+}
+
+.steps a, .content a {
+    text-decoration: underline;
+    color: black;
+    transition: 150ms;
+}
+
+.steps a:hover, .content a:hover {
+    color: white;
+    background-color: lightcoral;
+}
+
+.steps .step p {
+    width: 90%;
+    font-size: 2em;
+    margin: 30px auto;
+}
+
+.steps .step p .Facebook:hover {
+    background-color: darkblue;
+}
+
+.line {
+    border-bottom: 1px solid rgba(190, 190, 190);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.links {
+    display: flex;
+}
+
+.links .link {
+    width: 45%;
+    margin: 20px auto;
+}
+
+.links .link img {
+    width: 50%;
+}
+
+.links .link p {
+    font-size: 2.2em;
+}
+
+
+label.ruby.hidden{
+    display: none;
+} 
+label.maki.hidden{
+    display: none;
+} 
+label.zoi.hidden{
+    display: none;
+}
+label.shura.hidden{
+    display: none;
+}
+label.gacha.hidden{
+    display: none;
+}
+label.nyanpass.hidden{
+    display: none;
+}
+
+.form-container {
+    margin: 20px auto;
+    width: 90%;
+    font-size: 1.5em;
+}
+
+.form-container input, .form-container textarea, .form-container select {
+    font-size: 1em;
+    padding: 4px 8px;
+    background-color: rgb(242, 242, 242);
+    font-family: inherit;
+    margin: 12px auto;
+    border: 1px solid #ccc;
+    line-height: normal;
+    box-sizing: border-box;
+}
+
+.form-container option {
+    font-size: inherit;
+}
+
+@media(max-width: 1000px) {
+    .form-container {
+        font-size: 2em;
+    }
+}
+
+
+.form-container input {
+    width: 100%;
+}
+
+.form-container textarea {
+    width: 100%;
+}
+
+.form-container input:focus, .form-container textarea:focus {
+    background-color: white;
+    outline: 0;
+}
+
+.form-container select:focus {
+    outline: 0;
+}
+
+.form-container .button {
+    width: 70%;
+    font-family: inherit;
+    font-weight: bold;
+    color: lightcoral;
+    background-color: white;
+    letter-spacing: 1px;
+    border: solid 1px black;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 300ms;
+    padding: 1%;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.form-container .button:hover {
+    color: white;
+    background-color: lightcoral;
+}
+
+.accordion-container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+
+.accordion-container h2{
+    font-size:2em;
+}
+
+.cp_actab {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 2em;
+}
+/*
+.cp_actab .title{
+    width: 90%;
+}
+*/
+.cp_actab input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.cp_actab label {
+    font-weight: bold;
+    line-height: 2;
+    position: relative;
+    display: block;
+    padding: 0 0 0 1em;
+    cursor: pointer;
+    margin: 0 0 1px 0;
+/*    background: #da3c41;*/
+    background: white;
+    color:black;
+    transition: 500ms;
+    font-size: 0.7em;
+    overflow:auto;
+}
+
+.cp_actab label:hover, .cp_actab input:checked~label{
+    color: white;
+    background: lightcoral;
+}
+
+.cp_actab .cp_actab-content {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height 0.35s;
+    transition: max-height 0.35s;
+    color: #333333;
+    background: #f1c6c6;
+}
+
+.cp_actab .cp_actab-content p, .cp_actab-content ul {
+    margin: 1em;
+    font-size: 0.65em;
+}
+
+/* :checked */
+
+.cp_actab input:checked~.cp_actab-content {
+    max-height: 100em;
+}
+/* Icon */
+
+.cp_actab label::after {
+    font-weight: bold;
+    float: right;
+    margin-right: 5%;
+    /* margin-top: 2.5%; */
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    text-align: center;
+}
+
+@media (max-device-width: 500px) {
+    /*注意：誤魔化してます…device-widthなんて対応させるなんて知らなかったよ…（涙）*/
+    .cp_actab label::after {
+        /* font-size: 1.5em; */
+        margin-top: 2.5%;
+    }
+    .cp_actab .cp_actab-content p, .cp_actab label, .cp_actab-content ul {
+        font-size: 1.5em;
+    }
+}
+
+.cp_actab input[type=checkbox]+label::after {
+    content: '\25BC';
+}
+
+.cp_actab input[type=checkbox]:checked+label::after {
+    transform: rotateX(180deg);
+}
+
+.hidden{
+    display: none;
+}

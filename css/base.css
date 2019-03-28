@@ -1,0 +1,314 @@
+body {
+  color: rgb(32, 32, 32);
+  font-family: 'Noto Sans Japanese', 'Nunito Sans', 'Roboto', sans-serif;
+  margin: 0px;
+  height: 100vh;
+  background: white;
+}
+
+::-moz-selection {
+  background: lightcoral;
+  color: white;
+}
+
+::selection {
+  background: lightcoral;
+  color: white
+}
+
+/*ヘッダー系・主にナビゲーションメニュー等*/
+
+header {
+  text-align: right;
+  padding: 0px;
+}
+
+#navigation-container {
+  margin: 0 auto;
+}
+
+.navigation-bar {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  /*height: 80px;*/
+  text-align: center;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.navigation-bar img {
+  padding-top: 15px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  float: left;
+  height: 60px;
+  width: 200px;
+}
+
+.navigation-bar ul {
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+  float: right;
+  overflow: hidden;
+  background-color: white;
+}
+
+.navigation-bar li a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 2% 12px;
+  display: block;
+  font-size: 4.5vw;
+/*  font-weight: bolder; */
+   transition: 200ms;
+}
+
+.navigation-bar li a:hover {
+  color: white;
+  background: lightcoral;
+
+}
+
+.current {
+  color: rgb(240, 20, 20);
+}
+
+/*スマホ用のナビゲーション画面設定*/
+
+/*
+　スマホ画面用にナビゲーション画面を変更してます。
+　javascriptが嫌いなのでCSSだけで解決できないかと色々自分で試行錯誤してみたものの、全然自分では思いつくことはできませんでした。
+  というわけで、下のコードを参考にさせていただきました。（とはいっても、見ても分からなかったのでほぼほぼ丸写しですが…）
+　https://codepen.io/mutedblues/pen/MmPNPG?editors=1100
+　mutedbluesさん、ありがとうございます。
+
+　多分ここら辺のコードは書き直すことになると思います。
+
+　というか、スマホ画面用に改めて調整したい。スマホだとちょっと小さい印象があるので改善したい…けどなあ（
+　*/
+
+.navigation-bar .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  float: none;
+  box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+}
+
+/* ハンバーガーアイコンの設定*/
+
+.navigation-bar .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 40px 25px;
+  position: relative;
+  user-select: none;
+}
+
+.navigation-bar .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 30px;
+}
+
+.navigation-bar .menu-icon .navicon:before, .navigation-bar .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.navigation-bar .menu-icon .navicon:before {
+  top: 10px;
+}
+
+.navigation-bar .menu-icon .navicon:after {
+  top: -10px;
+}
+
+/* menu button */
+
+.navigation-bar .menu-btn {
+  display: none;
+}
+
+.navigation-bar .menu-btn:checked~.menu {
+  max-height: 1800px;
+}
+
+.navigation-bar .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.navigation-bar .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.navigation-bar .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.navigation-bar .menu-btn:checked~.menu-icon:not(.steps) .navicon:before, .navigation-bar .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 1100px) {
+  .navigation-bar li {
+    float: left;
+    /*
+    border-right: 1px solid;
+    border-left: 1px transparent;
+    */
+  }
+  .navigation-bar li:last-child {
+    border-right: none;
+  }
+  .navigation-bar li a {
+    padding: 28px 25px;
+  }
+  .navigation-bar .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  .navigation-bar .menu-icon {
+    display: none;
+  }
+  .navigation-bar li a {
+    font-size: 20px;
+  }
+}
+
+/*フッター*/
+
+.footer {
+  margin: 0;
+  height: 50px;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.footer-text {
+  float: left;
+  font-weight: lighter;
+  padding-left: 20px;
+  height: 100%
+}
+
+.footer-text h3 {
+  margin: 0px;
+  line-height: 50px;
+}
+
+.footer-bar {
+  height: auto;
+  padding-right: 20px;
+}
+
+.footer-bar ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer-bar li {
+  list-style-type: none;
+  float: right;
+  padding: 15px 10px;
+  opacity: 0.6;
+}
+
+.footer-bar li:hover {
+  opacity: 1;
+}
+
+@media (max-device-width: 800px) {
+  .footer-bar{
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .footer-bar{
+    display: none;
+  }
+}
+
+/*アニメーション系統*/
+
+/*
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0; -webkit-transform: translateY(-20px);}
+  100% {opacity: 1; -webkit-transform: translateY(0px);}
+}
+*/
+
+@keyframes fadeInLoad {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -15%);
+    -webkit-transform: translate(-50%, -15%);
+  }
+}
+
+.fadeInScroll {
+  opacity: 0;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transition: all 0.2s ease-out;
+  transition-delay: 0s;
+}
+
+.fadeInScroll.scrollin {
+  opacity: 1;
+}
+
+/*没になったアニメーション。使えるんだけどフォーマットと合わない…
+  解消する方法はあるにはあると思うからとりあえずおいておく。
+*/
+
+.fadeInScroll.scrollin.moveLeft {
+  transform: translate(5%, 0);
+}
+
+.fadeInScroll.scrollin.moveRight {
+  transform: translate(-5%, 0);
+}
+
+.fadeInScroll.scrollin.moveUp {
+  transform: translate(0, 10%);
+}
+
+.fadeInLoad {
+  -webkit-animation-name: fadeInLoad;
+  animation-name: fadeInLoad;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+
+
+:target::before {
+  content: "";
+  display: block;
+  height: 60px; /* fixed header height*/
+  margin: -60px 0 0; /* negative fixed header height */
+}

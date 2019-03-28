@@ -1,0 +1,181 @@
+.top {
+    display: block;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 1) 100%);
+    /*    background: linear-gradient(to bottom, rgba(240, 128, 128, 1) 0, rgba(240, 128, 128, 0.5) 80%, rgba(255, 255, 255, 1) 100%);*/
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.top h1 {
+    text-align: left;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    font-size: 6em;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    color: black;
+}
+
+.top::after {
+    content: "";
+    background-image: url("../img/jsa\ graduation\ 2.jpg");
+    width: 100%;
+    height: 99%;
+    background-size: cover;
+    background-position: 50% 40%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width: 800px) {
+    .top h1 {
+        font-size: 3em;
+    }
+}
+
+.content {
+    margin: 40px auto;
+    padding: 40px 30px;
+    position: relative;
+    background-color: white;
+    border-radius: 25px;
+    border: 4px solid lightcoral;
+    width: 80%;
+    overflow: hidden;
+}
+
+.content .caption {
+    text-align: left;
+    display: inline-block;
+    width: 80%;
+}
+
+.content .title {
+    margin: auto 0;
+    width: 90%;
+    text-align: left;
+    font-size: 4em;
+    padding-left: 48px;
+}
+
+.content h1 {
+    font-size: 4em;
+    padding: 0px 30px;
+}
+
+.content .paragraph-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content .paragraph {
+    width: 85%;
+    text-align: left;
+    font-size: 2em;
+    padding: 1em 1.5em;
+    background: rgb(242, 242, 242);
+    border-radius: 25px;
+}
+
+.content .paragraph a {
+    text-decoration: underline;
+    color: black;
+    transition: 150ms;
+}
+
+.content .paragraph a:hover {
+    color: white;
+}
+
+#events-link:hover {
+    background-color: lightcoral;
+}
+
+#career-link:hover {
+    background-color: lightcoral;
+}
+
+#tour-link:hover {
+    background-color: lightgreen;
+}
+
+.content .image-container {
+    float: left;
+    width: 15%;
+    position: relative;
+    max-width: 300px;
+    padding: 2.5%;
+}
+
+.content .image-container .image {
+    display: block;
+    width: 100%;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+}
+
+.names {
+    width: 40%;
+    float: right;
+    font-size: 1em;
+}
+
+.officer-photo {
+    width: 50%;
+    max-width: 900px;
+    padding: 0px 30px;
+}
+
+@media (max-width: 1400px) {
+    .content .caption {
+        width: 100%;
+        text-align: center;
+    }
+    .content .title {
+        width: 80%;
+        font-size: 5em;
+        padding-left: 0;
+        margin: 30px auto;
+    }
+    .content h1 {
+        font-size: 2.5em;
+    }
+    .content .paragraph {
+        font-size: 2em;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .content .image-container {
+        width: 90%;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .names {
+        width: 90%;
+        font-size: 1em;
+    }
+    .officer-photo {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+.line {
+    border-bottom: 1px solid rgba(190, 190, 190);
+    width: 90%;
+    margin: 60px auto 60px;
+}

@@ -1,0 +1,784 @@
+body {
+    color: rgb(32, 32, 32);
+    font-family: 'Nunito Sans', 'Roboto', sans-serif;
+    margin: 0px;
+    height: 100vh;
+    background: white;
+  }
+  
+  /*ヘッダー系・主にナビゲーションメニュー等*/
+  
+  header {
+    text-align: right;
+    padding: 0px;
+  }
+  
+  #navigation-container {
+    margin: 0 auto;
+    height: 80px;
+  }
+  
+  .navigation-bar {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    /*height: 80px;*/
+    text-align: center;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .navigation-bar img {
+    padding-top: 15px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    float: left;
+    height: 60px;
+    width: 200px;
+  }
+  
+  .navigation-bar ul {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+    float: right;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .navigation-bar li a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 6px 12px;
+    display: block;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .navigation-bar li a:hover {
+    color: rgb(240, 20, 20);
+  }
+  
+  .current {
+    color: rgb(240, 20, 20);
+  }
+  
+  /*スマホ用のナビゲーション画面設定*/
+  
+  /*
+  　スマホ画面用にナビゲーション画面を変更してます。
+  　javascriptが嫌いなのでCSSだけで解決できないかと色々自分で試行錯誤してみたものの、全然自分では思いつくことはできませんでした。
+    というわけで、下のコードを参考にさせていただきました。（とはいっても、見ても分からなかったのでほぼほぼ丸写しですが…）
+  　https://codepen.io/mutedblues/pen/MmPNPG?editors=1100
+  　mutedbluesさん、ありがとうございます。
+  
+  　多分ここら辺のコードは書き直すことになると思います。
+  　*/
+  
+  .navigation-bar .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    float: none;
+    box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+  }
+  
+  /* ハンバーガーアイコンの設定*/
+  
+  .navigation-bar .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 40px 25px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .navigation-bar .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 30px;
+  }
+  
+  .navigation-bar .menu-icon .navicon:before, .navigation-bar .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .navigation-bar .menu-icon .navicon:before {
+    top: 10px;
+  }
+  
+  .navigation-bar .menu-icon .navicon:after {
+    top: -10px;
+  }
+  
+  /* menu button */
+  
+  .navigation-bar .menu-btn {
+    display: none;
+  }
+  
+  .navigation-bar .menu-btn:checked~.menu {
+    max-height: 400px;
+  }
+  
+  .navigation-bar .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .navigation-bar .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  
+  }
+  
+  .navigation-bar .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  
+  .navigation-bar .menu-btn:checked~.menu-icon:not(.steps) .navicon:before, .navigation-bar .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  @media (min-width: 1300px) {
+    .navigation-bar li {
+      float: left;
+      /*
+      border-right: 1px solid;
+      border-left: 1px transparent;
+      */
+    }
+    .navigation-bar li:last-child {
+      border-right: none;
+    }
+    .navigation-bar li a {
+      padding: 28px 25px;
+    }
+    .navigation-bar .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+      height: 100%;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+    .navigation-bar .menu-icon {
+      display: none;
+    }
+  }
+  
+  /*トップの画像*/
+  
+  .top {
+    display: block;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 1) 100%);
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .top h1 {
+    text-align: left;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 15%;
+    font-size: 48px;
+    transform: translate(-50%, -15%);
+    -webkit-transform: translate(-50%, -15%);
+  }
+  
+  .top::after {
+    content: "";
+    background-image: url("../img/group\ photo.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  /*
+  .top {
+    background-image: url("../img/group\ photo.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom:30px;
+    background-attachment: fixed;
+  }
+  
+  .top h1 {
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 15%;
+    font-size: 48px;
+    transform: translate(-50%, -15%);
+  }
+  */
+  
+  #topjoin {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    width: auto;
+    font-size: 36px;
+    transform: translate(-50%, -90%);
+    -webkit-transform: translate(-50%, -90%);
+    padding-top: 60px;
+  }
+  
+  .top .scrollButton a{
+    position: absolute;
+    bottom: 0%;
+    z-index: 0;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-decoration: none;
+    padding-top: 70px;
+    font-size: 32px;
+    letter-spacing: .1em;
+    transition: opacity .3s;
+    color: black;
+    text-align: center;
+    width: 100%
+  }
+  
+  .top .scrollButton a span{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 1.5s infinite;
+    animation: sdb 1.5s infinite;
+    box-sizing: border-box;
+  }
+  
+  @-webkit-keyframes sdb {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes sdb {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  
+  .top .scrollButton a:hover{
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .top h1 {
+      font-size: 40px;
+    }
+    #topjoin {
+      font-size: 18px;
+    }
+  }
+  
+  /*TODO: make button for subscriptions.*/
+  
+  /*コンテンツ系*/
+  /*
+    一番悩んでる。特にグレーのキャプション部分が一番「コレジャナイ」感がある。
+    図形を盛り込まないと却って何も
+    正直結構微妙な気もする…変にボーダーを貼るくらいだったら
+    やっぱり白を基調にすればよかったのか…？
+    或いは色を別にするとか…ありかも。
+  
+  */
+  
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    position: relative;
+    background-color: white;
+    border-radius: 25px;
+    border: 4px rgb(190, 190, 190) solid;
+  }
+  
+  .content .caption {
+    width: 40%;
+    height: auto;
+    text-align: left;
+    display: inline-block;
+    background: rgb(242, 242, 242);
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .content .caption h1 {
+    padding: 0px;
+    margin: 0 0 15px 0;
+    font-size: 36px
+  }
+  
+  .content .caption p {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+  }
+  
+  .content .image-container {
+    width: 50%;
+    float: right;
+    opacity: 0.7;
+    position: relative;
+  }
+  
+  .content .image-container .image-caption{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    font-size: 36px;
+    width: 70%;
+  }
+  
+  .content .image-container:hover .image{
+    opacity: 0.2;
+  }
+  .content .image-container:hover .image-caption{
+    opacity: 1;
+  }
+  
+  .content .image-container .image {
+    display: block;
+    max-width: 100%;
+    margin: 0px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /*ボタンの調整。クッソガバガバだけど許してお願いなんでもしまｓ（ｒｙ*/
+  
+  .content .button {
+    font-family: inherit;
+    padding: 15px 0px;
+  }
+  
+  .content .button a {
+    padding: 15px 20px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    transition: all 0.2s;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  
+  .content .button a:hover {
+    color: black;
+    background-color: white;
+  }
+  
+  .label {
+    padding: 30px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  
+  /*三色選んで、どうぞ*/
+  
+  #social {
+    padding-top:30px;
+    margin-left: 10%;
+  }
+  #social .content{
+    border: 4px  lightcoral solid;
+  }
+  
+  #professional {
+    margin-right: 10%;
+  }
+  #professional .content{
+    border: 4px  lightblue solid;
+  }
+  
+  
+  #family {
+    margin-left: 10%;
+  }
+  #family .content{
+    border: 4px lightgreen solid;
+  }
+  
+  .line {
+    border-bottom: 1px solid rgba(190, 190, 190);
+    width: 95%;
+    margin: 60px auto 60px;
+  }
+  
+  @media (max-width:800px) {
+    .content a {
+      margin: 0.4em auto;
+      display: block;
+    }
+    .content {
+      padding-top: 40px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .content .caption {
+      display: inline-block;
+      text-align: left;
+      width: 90%;
+      margin-bottom: 40px;
+    }
+    .content .caption h1 {
+      font-size: 30px;
+    }
+    .content .caption p {
+      font-size: 18px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .content .image-container {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+    }
+    .content .image-container .image-caption{
+      font-size: 24px;
+    } 
+    .content .button a {
+      font-size: 18px;
+      margin-bottom: 0px;
+    }
+    #social, #professional, #family{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #social .content , #professional .content, #family .content{
+      transform: translate(0,0);
+    }
+    .line {
+      border-bottom: 1px solid rgba(190, 190, 190);
+      width: 90%;
+      margin: 30px auto 30px;
+    }
+  }
+  
+  .scrollin {
+    opacity: 0;
+    transform: translate(0, 50px);
+    -webkit-transform: translate(0, 50px);
+    transition: all 300ms;
+  }
+  
+  .scrollin.fade{
+    opacity: 1;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0,0);
+  }
+  
+  /*
+  .label1{
+    display: block;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+    position: relative;
+    width: 100%;
+    height: 90%;
+  }
+  .label1 h1{
+    text-align: center;
+  }
+  .label1::after {
+    content: "";
+    background-image: url("../img/jsa\ family.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+  */
+  
+  /*
+  .label1{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .label1 .column .h2{
+    margin: 0px;
+    padding: 20px;
+  }
+  .column {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align:center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+  #ski{
+    background-image: url(../img/jsa\ ski\ trip\ pop.png);
+  }
+  #formal{
+    background-image: url(../img/jsa\ formal\ pop.png);
+  }
+  #sports{
+    background-image: url(../img/jsa\ sports\ festival\ pop.png);
+  }
+  
+  
+  @media (max-width: 900px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+        height: 33.33%;
+        width: 100%;
+    }
+    .label1{
+      height: 60%;
+    }
+  }
+  */
+  
+  /*下の写真*/
+  
+  .bottom {
+    display: block;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    position: relative;
+    width: 100%;
+    height: 85%;
+  }
+  
+  .bottom h1 {
+    text-align: center;
+    padding-top: 10%;
+    width: auto;
+    font-size: 48px;
+    color: black;
+  }
+  
+  .bottom::after {
+    content: "";
+    background-image: url("../img/jsa\ officers.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .join {
+    padding: 15px 0px;
+    font-size: 36px;
+  }
+  
+  .join a {
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    transition: all 0.2s;
+    border: 2px solid black;
+    margin: auto;
+    padding: 20px 60px;
+    border-radius: 25px;
+    font-weight: 300;
+  }
+  
+  .join a:hover {
+    color: white;
+    background: black;
+  }
+  
+  @media (max-width:800px) {
+    .join a{
+      font-size: 24px;
+      padding: 20px 40px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .bottom h1 {
+      font-size: 40px;
+    }
+  }
+  
+  /*フッター系*/
+  
+  .footer {
+    margin: 0;
+    height: 50px;
+    font-size: 0.7em;
+    width: 100%;
+  }
+  
+  .footer-text {
+    float: left;
+    font-weight: lighter;
+    padding-left: 20px;
+    height: 100%
+  }
+  
+  .footer-text h3 {
+    margin: 0px;
+    line-height: 50px;
+  }
+  
+  .footer-bar {
+    height: auto;
+    padding-right: 20px;
+  }
+  
+  .footer-bar ul {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .footer-bar li {
+    list-style-type: none;
+    float: right;
+    padding: 15px 10px;
+    opacity: 0.6;
+  }
+  
+  .footer-bar li:hover{
+    opacity: 1;
+  }
+  
+  
+  /*アニメーション系統*/
+  
+  /*
+  @-webkit-keyframes fadeIn {
+    0% {opacity: 0; -webkit-transform: translateY(-20px);}
+    100% {opacity: 1; -webkit-transform: translateY(0px);}
+  }
+  */
+  
+  @keyframes fadeInLoad {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -100%);
+      -webkit-transform: translate(-50%, -100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -15%);
+      -webkit-transform: translate(-50%, -15%);
+    }
+  }
+  
+  .fadeInScroll{
+    opacity : 0;
+    transform : translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transition: all 0.2s ease-out;
+    transition-delay: 0s;
+    
+  
+  }
+  .fadeInScroll.scrollin{
+    opacity: 1;
+  }
+  
+  /*没になったアニメーション。使えるんだけどフォーマットと合わない…
+    解消する方法はあるにはあると思うからとりあえずおいておく。
+  */
+  .fadeInScroll.scrollin.moveLeft {
+    transform : translate(5%, 0);
+  }
+  .fadeInScroll.scrollin.moveRight {
+    transform : translate(-5%, 0);
+  }
+  .fadeInScroll.scrollin.moveUp {
+    transform : translate(0, 10%);
+  }
+  
+  .fadeInLoad {
+    -webkit-animation-name: fadeInLoad;
+    animation-name: fadeInLoad;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+  }
+  
+  
+  

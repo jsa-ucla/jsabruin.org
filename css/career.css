@@ -1,0 +1,195 @@
+.top {
+    display: block;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 1) 100%);
+    /*    background: linear-gradient(to bottom, rgba(240, 128, 128, 1) 0, rgba(240, 128, 128, 0.5) 80%, rgba(255, 255, 255, 1) 100%);*/
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.top h1 {
+    text-align: left;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    font-size: 6em;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    color: black;
+}
+
+.top::after {
+    content: "";
+    background-image: url("../img/jsa\ career\ 3.jpg");
+    width: 100%;
+    height: 99%;
+    background-size: cover;
+    background-position: 0% 20%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width: 800px) {
+    .top h1 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 800px) {
+    .top h1 {
+        font-size: 52px;
+    }
+}
+
+.content{
+    width: 80%;
+    max-width: 1200px;
+    font-size: 2.2em;
+    margin: auto;
+    padding: 0px 30px;
+}
+
+.content p{
+    background: rgb(242, 242, 242);
+    border-radius: 25px;
+    padding: 1em 1.5em;
+}
+
+.companies a, .content a{
+    text-decoration: underline;
+    color: black;
+    transition: 150ms;
+}
+
+.companies a:hover, .content a:hover{
+    color: white;
+    background-color: lightcoral;
+}
+
+.companies .Facebook:hover, .content .Facebook:hover{
+    background-color: darkblue;
+}
+
+.companies {
+    margin: 0 auto;
+    width: 90%;
+/*    max-width: 1200px;*/
+    margin-bottom: 40px;
+}
+
+.companies h1 {
+    font-size: 3em;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.companies p {
+    font-size: 2.5em;
+    margin: 25px auto;
+    width: 90%;
+}
+
+.companies ul{
+    font-size: 2em;   
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 2em;
+    background: rgb(242, 242, 242);
+    border-radius: 15px;
+    padding: 2.5% 5%;
+}
+
+
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#photos .container {
+    flex: 25%;
+    max-width: 25%;
+    vertical-align: middle;
+}
+
+#photos .container img {
+    width: 80%;
+    margin: 10%;
+}
+
+@media(max-width: 800px) {
+    #photos .container {
+        flex: 33%;
+        max-width: 33%;
+    }
+}
+
+@media(max-width: 600px) {
+    #photos .container {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.boxes .box {
+    flex: 50%;
+    max-width: 40%;
+    border-radius: 25px;
+    border: 4px solid lightcoral;
+    padding: 2%;
+    margin: 2%;
+}
+
+.boxes .box h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.boxes .box p {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 2em;
+    background: rgb(242, 242, 242);
+    border-radius: 15px;
+    padding: 5% 10%;
+}
+
+@media(max-width: 1000px) {
+    .boxes .box {
+        flex: 100%;
+        max-width: 90%;
+        padding: 5%;
+        margin: 5%;
+    }
+}
+
+.line {
+    border-bottom: 1px solid rgba(190, 190, 190);
+    width: 100%;
+    margin: 0 auto;
+}
+
+

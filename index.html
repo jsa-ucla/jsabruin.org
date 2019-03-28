@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<!--
+    技術者の皆さん、こんにちは。にゃんぱすー。
+    フロントエンド初心者です。汚いソースコードで申し訳ない限りです。
+    WordPressとかWixとか使い方が全然分からないのでhtml, css, javascript, phpで組んでみました。
+    jQuery/ajaxはちょっとだけ触った程度で、bootstrap等は使ってません。使えばよかった。
+    外部ライブラリは、画像表示用にSwipebox(Lightboxの軽量版)のみ。
+    メールサービスはmailchimp経由のgmailで保管してます。
+
+    最初は「こんなもん一週間で終わるやろ」と思ってましたががなんだかんだ一ヶ月かかりました。
+    ウェブデザインなんて二度とやりたくありません（迫真）
+
+    device-widthとwidthの違いを途中まで知らなかったので、完全なモバイル対応はできていません。
+    本当にすみません。ナビゲーションバーが多少使いづらいと思います。
+
+    こちらのサイトに関してバグ報告・要望等あれば以下のメールアドレスまでお願いします。
+    jsaweb.ucla@gmail.com
+
+    goto: findme.php    
+-->
+
+<head>
+
+    <meta charset="utf-8">
+    <title>UCLA Japanese Student Association — 日本人学生会</title>
+    <link rel="icon" href="../img/jsa icon.png">
+    <meta name="description" content="UCLA JSA (Japanese Student Association Official Website. UCLA 日本人学生会公式サイトです。">
+    <meta property="og:title" content="UCLA Japanese Student Association  — 日本人学生会"/>
+    <meta property="og:image" content="http://jsabruin.org/img/logo.jpg">
+    <meta property="og:description" content="Official website for UCLA Japanese Student Association."/>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans:300,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124647782-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-124647782-1');
+    </script>
+
+</head>
+
+<body>
+    <div class="top">
+        <!--
+        ロゴのかっこいい入れ方が思い浮かばなかった
+        <div class="logo">
+            <img src="../img/jsa icon (large).png">
+        </div>
+        -->
+        <div class="header">
+            <h1>
+                <span style="font-size:2em">UCLA</span>
+                <br>Japanese Student Association
+                <br>日本人学生会
+            </h1>
+        </div>
+        <div class="buttons">
+            <div class="button">
+                <a href="../home-en">English</a>
+            </div>
+            <div class="button">
+                <a href="../home-jp">日本語</a>
+            </div>
+        </div>
+        <div class="sns">
+            <!--Facebook/Instagram双方、アイコンを無料で配布してます-->
+            <a href="https://www.facebook.com/groups/218855944944721/" target="_blank">
+                <img src="../img/flogo-RGB-HEX-Blk-100.png">
+            </a>
+            <a href="https://www.instagram.com/ucla.jsa/" target="_blank">
+                <img src="../img/glyph-logo_May2016.png">
+            </a>
+        </div>
+    </div>
+</body>
+
+
+</html>

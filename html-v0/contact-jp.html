@@ -1,0 +1,418 @@
+<!DOCTYPE >
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124348790-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-124348790-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>お問い合わせ — UCLA Japanese Student Association</title>
+    <link rel="icon" href="../img/jsa icon.png">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/contact.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans:300,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation-bar">
+            <div id="navigation-container">
+                <a href="../">
+                    <img class="logo" src="../img/UCLA JSA logo.png" ; alt="JSAロゴ">
+                </a>
+                <!-- hamburger icon -->
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn">
+                    <span class="navicon"></span>
+                </label>
+                <ul class="menu">
+                    <li>
+                        <a href="../home-jp/">
+                            ホーム
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../about-jp/">
+                            JSAって？
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../events-jp/">
+                            イベント
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../career-jp/">
+                            キャリア
+                        </a>
+                    </li>
+                    <!--
+                                                    <li>
+                                                        <a href="tours-en">
+                                                            TOURS
+                                                        </a>
+                                                    </li>
+                                                    -->
+                    <li>
+                        <a href="../join-jp/">
+                            入会情報
+                        </a>
+                    </li>
+                    <li class="current">
+                        <a href="../contact-jp/">
+                            お問い合わせ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../home-en/">
+                            ENGLISH
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="top">
+        <h1>
+            お問い合わせ
+        </h1>
+    </div>
+    <div class="content">
+        <p>
+            <b>UCLA JSAのお問い合わせ窓口はこちらのページから。</b> お問い合わせ先（お問い合わせフォーム、メールアドレス）、よくあるご質問一覧をご紹介しています。
+        </p>
+    </div>
+
+
+    <div class="steps">
+
+
+        <div class="step" id="form">
+            <h1>お問い合わせフォーム</h1>
+            <div class="line"></div>
+            <p class="notsubmitted">
+                こちらのフォームの他に、
+                <a href="mailto:jsa.ucla@gmail.com" target="_blank">jsa.ucla@gmail.com</a>まで、直接メールでのご対応も受け付けております。 また、
+                <a href="#faq">よくある質問</a>をご確認の上、こちらのフォームをご利用ください。お問い合わせ内容を確認次第、五日以内にご返答いたします。
+            </p>
+            <!--
+                ちなみにゴミみたいなコードなのでセキュリティ対策はしてません。
+                後々対策してみます。すみません。
+            -->
+            <div class="form-container">
+                <form method="post" class="notsubmitted" id="mailform" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    お問い合わせの種類
+                    <br />
+                    <select id="dropdown" name="content">
+                        <option value="about jsa">JSAについて</option>
+                        <option value="event">イベントについて</option>
+                        <option value="career">キャリアについて</option>
+                        <option value="join jsa">入会情報について</option>
+                        <option value="other">その他</option>
+                    </select>
+                    <br /> 姓（例：山田）
+                    <br />
+                    <input type="text" name="lastname" value="" required/>
+                    <br /> 名（例：太郎）
+                    <br />
+                    <input type="text" name="firstname" value="" required/>
+                    <br /> メールアドレス
+                    <br />
+                    <input type="email" name="emailaddress" value="" required/>
+                    <br /> 内容
+                    <br />
+                    <textarea name="message" cols="30" rows="5" required></textarea>
+                    <br />
+                    <br />
+                    <input type="hidden" name="language" value="Japanese">
+                    <input type="submit" value="送信" class="button" />
+                </form>
+            </div>
+            <p class="submitted hidden">
+                <b>フォームが送信されました。</b>お問い合わせ内容を確認次第、五日以内にご返答いたします。五日以内に返答がない場合、お手数ですが、
+                <a href="mailto:jsa.ucla@gmail.com">jsa.ucla@gmail.com</a>まで直接ご連絡ください。
+            </p>
+        </div>
+        <div class="step" id="faq">
+            <h1>よくある質問</h1>
+            <div class="line"></div>
+            <div class="accordion-container">
+                <h2>入会について</h2>
+                <div class="cp_actab">
+                    <input id="tab-one" type="checkbox" name="tabs">
+                    <label for="tab-one">
+                        入会するにはどうしたらいいですか？
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>入会案内は、基本的に新歓ミーティング("General Meeting")で行います。
+                            </b>また、新歓ミーティングに来れない方でも、JSAが主催する各交流イベント等でも入会受付を行っています。イベントに参加できない場合は、
+                            <a href="#form">こちらまで</a> ご連絡いただければWebでもご案内できます。</p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-three" type="checkbox" name="tabs">
+                    <label for="tab-three">年度途中でも入会できますか？</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b> できます。
+                            </b>JSAの開催する各交流イベントにて、入会受付を行っています。
+                            <a href="#form">こちらまで</a>ご連絡いただければWebでもご案内できます。
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-two" type="checkbox" name="tabs">
+                    <label for="tab-two">JSAの会員はいつまで有効ですか？</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>JSA会員は入会した日に関わらず、UCLA秋学期初日から夏学期最終日まで有効です。
+                            </b> 詳しい日程は
+                            <a href="https://www.registrar.ucla.edu/Calendars/Annual-Academic-Calendar" target="_blank">UCLAアカデミックカレンダー</a>をご参照ください。
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-eight" type="checkbox" name="tabs">
+                    <label for="tab-eight">JSAに入会するには会費は必要ですか?</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>会費は年間$20になります。</b>こちらの会費は寄付として扱っており、今後のJSAのイベントを開催するために必要な基金として使用しています。支払い方法は現金、カード、Venmoのいずれも受けつけています。支払い方法についてのお問い合わせは
+                            <a href="#form">こちらから</a>お願いします。
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-four" type="checkbox" name="tabs">
+                    <label for="tab-four">JSA会員になると、どんなことができますか?</label>
+                    <div class="cp_actab-content">
+                        <p>大半のJSAのイベントが
+                            <b>無料</b>になります。また、人気のイベントの場合は、
+                            <b>割引</b>、もしくは
+                            <b>優先入場</b>等の待遇が受けられます。
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-five" type="checkbox" name="tabs">
+                    <label for="tab-five">UCLAの学生でなくても入会はできますか？
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>できます。</b>JSA主催の各イベントにて入会受付を行っているので、気軽に声をかけてください。イベントに参加できない場合は、
+                            <a href="#form">こちらまで</a>ご連絡いただければWebでもご案内できます。また、JSAの開催するイベントの大半がUCLA付近で行われています。予めご了承ください。
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-six" type="checkbox" name="tabs">
+                    <label for="tab-six">日本人でなくとも入会はできますか?</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <bできます。</b>私たちの交流イベントは、日本人でなくても楽しめるようにプランニングされているので、気軽にご参加ください！
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-seven" type="checkbox" name="tabs">
+                    <label for="tab-seven">JSAのメンバーでなくとも、JSAのイベントに参加できますか？</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>できます。</b>基本的にJSAのイベントは一般参加可能です。 ただし、イベントによっては、JSAのメンバーを優先的に参加・割引等の優遇をする場合もあります。予めご了承ください。また、特定のイベントに興味がある場合は、
+                            <a href="#form">こちらまで</a>ご連絡いただければ、詳しい情報をお送りすることもできます。
+                        </p>
+                    </div>
+                </div>
+                <!--we're at tab-eight-->
+
+                <h2>JSAについて</h2>
+                <div class="cp_actab">
+                    <input id="tab-one-about" type="checkbox" name="tabs">
+                    <label for="tab-one-about"> JSAはNSU (Nikkei Student Union)やJPAM (JaPan-AMerica Language & Culture Club)とどう違いますか?
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            JSA、NSU、JPAMは日本の文化やアイデンティティーを共有することを目的としたUCLAの学生団体ですが、目的（ミッション）によってさらに細分化されています。 JSAは日本の文化やアイデンティティーに興味を持つ 全ての学生を集め、一つのコミュニティーを形成することを目的とした学生団体です。
+                        </p>
+                        <!--優しい人の意見により削除 
+                                                   <ul>
+                            <li>
+                                JSAは日本の文化やアイデンティティーに興味を持つ
+                                <b>全ての学生</b>を集め、一つのコミュニティーを形成することを目的とした学生団体です。
+                            </li>
+                            <li>
+                                NSUは主にアメリカにおける
+                                <b>日系人</b>(Japanese-American)の歴史的・政治的な背景に強い感心を持つ学生を対象に、UCLA内外に「日系」文化を広めることを目的とした学生団体です。
+                            </li>
+                            <li>
+                                JPAMは
+                                <b>日本からの留学生</b>とUCLAで
+                                <b>日本語を勉強している学生</b>を対象に、日本の文化や言語の理解を深めることを目的とした学生団体です。
+                            </li>
+
+                        </ul>
+                    -->
+                        <p>
+                            その他二つの団体については、
+                            <a href="https://www.facebook.com/uclanikkei/" target="_blank">NSU</a>と
+                            <a href="https://www.facebook.com/groups/JPAMUCLA/" target="_blank">JPAM</a>のページをご参照ください！
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-two-about" type="checkbox" name="tabs">
+                    <label for="tab-two-about">JSAとNSU/JPAMと同時に入会することはできますか？</label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>できます。</b>NSU/JPAMとの合同イベントを企画することもあるので、お楽しみに。
+                        </p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="tab-three-about" type="checkbox" name="tabs">
+                    <label for="tab-three-about"> JSAのオフィサーチームに参加するにはどうしたらいいですか？
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            <b>オフィサーチームの新規募集は毎年冬学期の初めに行われます。</b> 詳しい情報は
+                            <a href="https://www.facebook.com/groups/218855944944721/" class="Facebook" target="_blank">Facebookページ</a>と
+                            <a href="join#newsletter">メールマガジン</a>に掲載する予定です。新オフィサーは冬学期に10週間のインターン期間を設けられ、現オフィサーからトレーニングを受けることができます。 オフィサーチームに関するお問い合わせ
+                            <a href="#form">こちらから</a>うけつけてます。
+
+
+                        </p>
+                    </div>
+                </div>
+                <h2 id="career-faq">キャリア</h2>
+                <div class="cp_actab">
+                    <input id="tab-one-career" type="checkbox" name="tabs">
+                    <label for="tab-one-career"> JSAでキャリアイベントを開催したいです。どうすれば良いですか？
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>
+                            キャリアイベントのお申し込みは、
+                            <a href="mailto:uclajsa-career@hotmail.com" target="_blank">uclajsa-career@hotmail.com</a> まで、または
+                            <a href="../contact-jp#form">こちらのフォーム</a>からご連絡ください。下記の情報をご記入くださいますようお願いします。
+                        </p>
+                        <ul>
+                            <li>企業名
+                            </li>
+                            <li>企業代表者名
+                            </li>
+                            <li>企業代表者の連絡先
+                            </li>
+                            <li>希望日程（複数指定推奨）
+                            </li>
+                            <li>イベントの種類（企業説明会・採用面接・就活相談等）
+                            </li>
+                            <li>希望集客人数
+                            </li>
+                        </ul>
+                        <p>
+                            お問い合わせ内容を確認次第、五日以内にご返答いたします。
+                            <br> 企業様のお力になれるよう、UCLA JSAキャリアメンバー一同尽力致しますので何卒宜しくお願い致します。
+                        </p>
+                    </div>
+                </div>
+                <!--Joining:
+                    How do I apply for membership?
+                    I'm not a UCLA student. Can I still join UCLA JSA?
+                    I'm not Japanese/I don't speak Japanese. Can I still join UCLA JSA?
+                    I'm not a JSA member, but I'm still interested in going to JSA events. Is that possible?
+                    How is UCLA JSA different from UCLA Nikkei Student Union/UCLA Japan-America Language & Culture Club?
+                    How can our company organize a career event with UCLA JSA?
+                    How can our company become a sponsor for UCLA JSA?
+                    How do I join the JSA officer team?
+                -->
+            </div>
+        </div>
+        <div class="step" id="social">
+            <h1>JSA公式SNSページ</h1>
+            <div class="line"></div>
+            <div class="links">
+                <div class="link">
+                    <a href="https://www.instagram.com/ucla.jsa/" target="_blank">
+                        <img src="../img/instagram icon.png" alt="インスタグラム">
+                    </a>
+                    <p>
+                        <b>Instagram</b>
+                        <br>@ucla.jsa
+                    </p>
+                </div>
+                <div class="link">
+                    <a href="https://www.facebook.com/groups/218855944944721/" target="_blank">
+                        <img src="../img/facebook icon 2.jpg" alt="フェイスブック">
+                    </a>
+                    <p>
+                        <b>Facebook</b>
+                    </p>
+                </div>
+                <!--ブログ・ツイッター設置検討中-->
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-text">
+            <h3> © UCLA JSA. All Rights Reserved.</h3>
+        </nav>
+        <nav class="footer-bar">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/ucla.jsa/" target="_blank">
+                        <img src="../img/instagram icon.png" width="20" height="20" alt="インスタグラム">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/groups/218855944944721/" target="_blank">
+                        <img src="../img/facebook icon.png" width="20" height="20" alt="フェイスブック">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:jsa.ucla@gmail.com" target="_blank">
+                        <img src="../img/mail icon.png" width="20" height="20" alt="メール">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        $('#mailform').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '../send.php',
+                type: 'post',
+                data: $('#mailform').serialize(),
+                success: function () {
+                    //alert('OK');
+                    var notsubmittedItems = document.querySelectorAll(".notsubmitted");
+                    [].forEach.call(notsubmittedItems, function (el) {
+                        el.classList.add("hidden");
+                    });
+                    document.querySelector('.submitted').classList.remove('hidden');
+                    location.href = "#form";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
